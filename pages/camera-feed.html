@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Camera Feed - Quadruped Robot Control</title>
+    
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Optional: Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Add favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Header and Navigation Bar (Same as Homepage) -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/robot-icon.png" alt="Robot Logo" width="40" height="40">
+                <h1>Quadruped Robot</h1>
+            </div>            
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="camera-feed.html">Camera Feed</a></li>
+                    <li><a href="#controls">Robot Controls</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                    <li><a href="#data">Data</a></li>
+                    <li><a href="#help">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content: Camera Feed Page -->
+    <main>
+        <section class="camera-feed-section">
+            <div class="container">
+                <h2>Live Camera Feed</h2>
+                <div class="camera-feed">
+                    <!-- Placeholder for live camera feed -->
+                    <video id="camera" controls autoplay>
+                        <source src="path_to_your_camera_feed" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Camera control options -->
+                <div class="camera-controls">
+                    <label for="brightness">Brightness:</label>
+                    <input type="range" id="brightness" min="0" max="100" value="50">
+                    <span id="brightness-value">50</span>
+
+                    <label for="contrast">Contrast:</label>
+                    <input type="range" id="contrast" min="0" max="100" value="50">
+                    <span id="contrast-value">50</span>
+                </div>
+
+                <!-- Screenshot & Recording Controls -->
+                <div class="screenshot-controls">
+                    <button id="screenshot-btn">Take Screenshot</button>
+                    <button id="record-btn">Start Recording</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as Homepage) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Robotics Club | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Link to External JS for Camera Feed Functionality -->
+    <script src="js/camera-feed.js"></script>
+</body>
+
+</html>

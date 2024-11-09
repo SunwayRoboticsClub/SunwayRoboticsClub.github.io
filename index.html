@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +27,7 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#camera">Camera Feed</a></li>
+                    <li><a href="pages/camera-feed.html">Camera Feed</a></li>
                     <li><a href="#controls">Robot Controls</a></li>
                     <li><a href="#settings">Settings</a></li>
                     <li><a href="#data">Data</a></li>
@@ -45,40 +43,11 @@
     
 
     <main>
-        <section id="controls" class="section">
+        <!-- Simplified Content: Just Hello World -->
+        <section class="section">
             <div class="container">
-                <h2>Quick Access Controls</h2>
-                <button class="quick-btn" id="start-camera">Start Camera Feed</button>
-                <button class="quick-btn" id="start-control">Start Control Panel</button>
-                <button class="quick-btn" id="view-status">View Robot's Current Status</button>
-            </div>
-        </section>
-        
-
-        <section id="controls" class="section">
-            <div class="container">
-                <h2>Robot Movement Controls</h2>
-                <div class="control-buttons">
-                    <button class="move-btn" id="move-forward">Move Forward</button>
-                    <button class="move-btn" id="move-backward">Move Backward</button>
-                    <button class="move-btn" id="move-left">Move Left</button>
-                    <button class="move-btn" id="move-right">Move Right</button>
-                    <button class="move-btn" id="stop">Stop</button>
-                </div>
-
-                <div class="robot-status">
-                    <h3>Status:</h3>
-                    <p id="robot-status">Ready to move</p>
-                </div>
-
-                <!-- Optional: Add slider for speed control -->
-                <div class="speed-control">
-                    <label for="speed">Speed Control:</label>
-                    <input type="range" id="speed" name="speed" min="1" max="10" value="5">
-                    <span id="speed-value">5</span>
-                </div>
-
-                <button class="action-btn" id="reset">Reset Robot</button>
+                <h2>Hello World</h2>
+                <p>Welcome to the Quadruped Robot Control page.</p>
             </div>
         </section>
     </main>

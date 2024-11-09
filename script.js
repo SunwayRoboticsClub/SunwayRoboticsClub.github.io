@@ -63,3 +63,30 @@ document.getElementById('view-status').addEventListener('click', function() {
 document.getElementById('view-analytics').addEventListener('click', function() {
     window.location.href = '/analytics';  // Replace with actual URL or page for analytics
 });
+
+
+
+document.getElementById('emergency-stop').addEventListener('click', function() {
+    console.log('Emergency Stop Activated');
+});
+
+document.getElementById('pick-up-object').addEventListener('click', function() {
+    console.log('Picking up object');
+});
+
+document.getElementById('flip').addEventListener('click', function() {
+    console.log('Flipping');
+});
+
+document.getElementById('activate-sensors').addEventListener('click', function() {
+    console.log('Sensors Activated');
+});
+
+function updateStatus(statusText) {
+    document.getElementById('robot-status').textContent = statusText;
+}
+
+document.getElementById('reset').addEventListener('click', function() {
+    console.log('Resetting Robot');
+    updateStatus('Ready');
+});
