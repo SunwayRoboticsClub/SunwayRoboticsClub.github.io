@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Control Quadruped Robot</title>
-  </head>
-  <body>
-    <h1>Robot Control</h1>
-    <button onclick="sendCommand('rosrun my_package start_node')">Start Robot</button>
-    <button onclick="sendCommand('rosnode kill /my_node')">Stop Robot</button>
 
-    <script>
-      function sendCommand(command) {
-        fetch('http://<your-server-ip>:3000/control', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ command }),
-        })
-          .then(response => response.json())
-          .then(data => console.log(data))
-          .catch(error => console.error('Error:', error));
-      }
-    </script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quadruped Robot Control</title>
+    
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Optional: Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Add favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Quadruped Robot Control Panel</h1>
+            <nav>
+                <ul>
+                    <li><a href="#camera">Camera Feed</a></li>
+                    <li><a href="#controls">Robot Controls</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="camera" class="section">
+            <div class="container">
+                <h2>Live Camera Feed</h2>
+                <div class="camera-feed">
+                    <!-- Placeholder for live camera feed, can be replaced with <video> or <iframe> -->
+                    <video id="camera" controls autoplay>
+                        <source src="path_to_your_camera_feed" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="controls" class="section">
+            <div class="container">
+                <h2>Robot Movement Controls</h2>
+                <div class="control-buttons">
+                    <button class="move-btn" id="move-forward">Move Forward</button>
+                    <button class="move-btn" id="move-backward">Move Backward</button>
+                    <button class="move-btn" id="move-left">Move Left</button>
+                    <button class="move-btn" id="move-right">Move Right</button>
+                    <button class="move-btn" id="stop">Stop</button>
+                </div>
+
+                <div class="robot-status">
+                    <h3>Status:</h3>
+                    <p id="robot-status">Ready to move</p>
+                </div>
+
+                <!-- Optional: Add slider for speed control -->
+                <div class="speed-control">
+                    <label for="speed">Speed Control:</label>
+                    <input type="range" id="speed" name="speed" min="1" max="10" value="5">
+                    <span id="speed-value">5</span>
+                </div>
+
+                <button class="action-btn" id="reset">Reset Robot</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Robotics Club | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript for functionality -->
+    <script src="script.js"></script>
+</body>
+
 </html>
