@@ -1,1 +1,59 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadruped Robot Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #videoFeed {
+            width: 640px;
+            height: 480px;
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quadruped Robot Control</h1>
+    
+    <!-- Camera Stream -->
+    <div>
+        <img id="videoFeed" src="http://<camera_ip>:<port>/video_feed" alt="Live Camera Feed">
+    </div>
+    
+    <!-- Movement Controls -->
+    <div>
+        <button onclick="sendCommand('move_forward')">Move Forward</button>
+        <button onclick="sendCommand('move_back')">Move Backward</button>
+        <button onclick="sendCommand('turn_left')">Turn Left</button>
+        <button onclick="sendCommand('turn_right')">Turn Right</button>
+        <button onclick="sendCommand('stop')">Stop</button>
+    </div>
+
+    <script>
+        // WebSocket setup for SSH commands (backend)
+        const socket = new WebSocket('ws://localhost:8080');  // Backend WebSocket server
+        
+        // Send movement command to backend
+        function sendCommand(command) {
+            socket.send(command);  // Send command to backend
+        }
+
+        // Handling WebSocket messages from server (if needed for feedback)
+        socket.onmessage = function(event) {
+            console.log("Received: " + event.data);
+        };
+    </script>
+</body>
+</html>
