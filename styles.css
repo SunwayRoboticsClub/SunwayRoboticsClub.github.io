@@ -46,7 +46,25 @@ nav ul li a:hover {
     color: #f9d342;
 }
 
-/* Sections */
+
+/* Quick Access Buttons */
+.quick-btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.quick-btn:hover {
+    background-color: #1976D2;
+}
+
+
+/* General Layout for Sections */
 .section {
     margin: 40px 0;
 }
@@ -55,6 +73,11 @@ h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
 }
+
+p {
+    font-size: 1.2em;
+}
+
 
 /* Camera Feed */
 .camera-feed {

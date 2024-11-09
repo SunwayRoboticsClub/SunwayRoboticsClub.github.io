@@ -20,29 +20,38 @@
 <body>
     <header>
         <div class="container">
-            <h1>Quadruped Robot Control Panel</h1>
+            <div class="logo">
+                <img src="robot-icon.png" alt="Robot Logo" width="40" height="40">
+                <h1>Quadruped Robot</h1>
+            </div>
             <nav>
                 <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#camera">Camera Feed</a></li>
                     <li><a href="#controls">Robot Controls</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                    <li><a href="#data">Data</a></li>
+                    <li><a href="#help">Help</a></li>
                 </ul>
             </nav>
+            <div class="auth-buttons">
+                <button class="auth-btn" id="login-btn">Login</button>
+                <button class="auth-btn" id="signup-btn">Sign Up</button>
+            </div>
         </div>
     </header>
+    
 
     <main>
-        <section id="camera" class="section">
+        <section id="controls" class="section">
             <div class="container">
-                <h2>Live Camera Feed</h2>
-                <div class="camera-feed">
-                    <!-- Placeholder for live camera feed, can be replaced with <video> or <iframe> -->
-                    <video id="camera" controls autoplay>
-                        <source src="path_to_your_camera_feed" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                <h2>Quick Access Controls</h2>
+                <button class="quick-btn" id="start-camera">Start Camera Feed</button>
+                <button class="quick-btn" id="start-control">Start Control Panel</button>
+                <button class="quick-btn" id="view-status">View Robot's Current Status</button>
             </div>
         </section>
+        
 
         <section id="controls" class="section">
             <div class="container">
