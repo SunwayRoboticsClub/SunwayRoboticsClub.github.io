@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Control - Quadruped Robot</title>
+
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Robot Control</h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="camera-feed.html">Camera Feed</a></li>
+                    <li><a href="robot-control.html">Robot Controls</a></li>
+                    <li><a href="data-analytics.html">Data</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <section class="control-section">
+            <div class="container">
+                <h2>Movement Controls</h2>
+                <div class="control-buttons">
+                    <button id="move-forward">↑ Forward</button><br>
+                    <button id="move-left">← Left</button>
+                    <button id="stop">Stop</button>
+                    <button id="move-right">→ Right</button><br>
+                    <button id="move-backward">↓ Backward</button>
+                </div>
+
+                <!-- Robot Status Display -->
+                <div class="robot-status">
+                    <h3>Status:</h3>
+                    <p id="robot-status">Awaiting command...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Robotics Club | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to handle robot control actions -->
+    <script src="js/robot-control.js"></script>
+</body>
+</html>

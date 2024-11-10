@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Quadruped Robot Control</title>
+    
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <!-- Header Section (reused from other pages) -->
+    <header>
+        <div class="container">
+            <h1>Settings</h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="camera-feed.html">Camera Feed</a></li>
+                    <li><a href="robot-control.html">Robot Controls</a></li>
+                    <li><a href="data-analytics.html">Data</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <section class="settings-section">
+            <div class="container">
+                <h2>Robot Settings</h2>
+                <label for="speed-limit">Speed Limit:</label>
+                <input type="range" id="speed-limit" min="1" max="10" value="5">
+                <label for="sensitivity">Control Sensitivity:</label>
+                <input type="range" id="sensitivity" min="1" max="10" value="5">
+            </div>
+        </section>
+
+        <section class="settings-section">
+            <div class="container">
+                <h2>Camera Settings</h2>
+                <label for="resolution">Resolution:</label>
+                <select id="resolution">
+                    <option value="720p">720p</option>
+                    <option value="1080p">1080p</option>
+                    <option value="4k">4K</option>
+                </select>
+                <label for="frame-rate">Frame Rate (fps):</label>
+                <input type="number" id="frame-rate" min="10" max="60" value="30">
+            </div>
+        </section>
+
+        <section class="settings-section">
+            <div class="container">
+                <h2>User Settings</h2>
+                <label for="theme">Theme:</label>
+                <select id="theme">
+                    <option value="light">Light Mode</option>
+                    <option value="dark">Dark Mode</option>
+                </select>
+                <label for="sound">Sound Notifications:</label>
+                <input type="checkbox" id="sound" checked>
+            </div>
+        </section>
+
+        <div class="container">
+            <button id="save-settings">Save Settings</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Robotics Club | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to handle saving settings -->
+    <script src="js/settings.js"></script>
+</body>
+</html>

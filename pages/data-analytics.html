@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Analytics and Logs - Quadruped Robot Control</title>
+    
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Optional: Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Add favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Header Section (similar to other pages) -->
+    <header>
+        <div class="container">
+            <h1>Data Analytics and Logs</h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="camera-feed.html">Camera Feed</a></li>
+                    <li><a href="robot-control.html">Robot Controls</a></li>
+                    <li><a href="data-analytics.html">Data</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <section class="performance-dashboard">
+            <div class="container">
+                <h2>Performance Dashboard</h2>
+                <!-- Placeholder for data visualization charts -->
+                <div id="charts-container">
+                    <canvas id="battery-chart"></canvas>
+                    <canvas id="speed-chart"></canvas>
+                    <canvas id="distance-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="robot-logs">
+            <div class="container">
+                <h2>Robot Logs</h2>
+                <!-- Table displaying robot logs -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Action</th>
+                            <th>Status</th>
+                            <th>Sensor Readings</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logs-table-body">
+                        <!-- Log entries will be dynamically populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="export-data">
+            <div class="container">
+                <button id="export-csv">Export Data as CSV</button>
+                <button id="export-json">Export Data as JSON</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Robotics Club | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for charting and data export functionality -->
+    <script src="js/data-analytics.js"></script>
+</body>
+</html>
